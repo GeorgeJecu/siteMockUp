@@ -1,0 +1,713 @@
+html,body, .container{
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.main{
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    max-width: 1200px;
+    min-height: 100%;
+}
+
+nav {
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: #24272b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+#hamburgerMenu{
+    margin-right: 1em;
+    display: none;
+}
+
+#logoArea{
+    max-width: fit-content;
+}
+
+#logoArea > a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+[alt="Fixed Fitness logo"] {
+    width: 3em;
+    height: 3em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#logoArea > a >  h3 {
+    /* text-decoration: none; */
+    min-width: fit-content;
+
+}
+
+#logoArea:hover {
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+nav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+nav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+.productList {
+    /* background-color: red; */
+    padding: 2em 5em 3em ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3.5rem;
+    row-gap: 3.5rem;
+    max-width: 100%;
+    /* margin-top: 2em; */
+    /* sadjk */
+}
+
+.productList > a{
+    text-decoration: none;
+}
+
+.productCard {
+    transition: 1s;
+    transition-timing-function: ease;
+    background-color: white;
+    /* border: 1px solid  #24272b; */
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    box-shadow: 10px 15px 20px 20px #3e3f41;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.productCard:hover{
+    margin: -0.6rem;
+    transition: 1s;
+    transition-timing-function: ease;
+    box-shadow: 20px 30px 40px 40px #3e3f41;
+
+}
+
+.productImage {
+    border-radius: 3rem;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+[alt="Product image"] {
+    max-width: 100%;
+}
+
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
+}
+
+.title, .price {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    color: #303030;
+    text-align: center;
+}
+.title{
+    font-weight: 600;
+}
+
+.productCard button {
+    padding: 1rem;
+    margin: -1rem;
+    margin-top: 1rem;
+    border: none;
+    /* background-color: #303030; */
+    background-image: linear-gradient(to right, #1f1f1f, #414141);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: white;
+    /* font-size: 15px; */
+    font-weight: 600;
+
+}
+
+/* .productCard button > a {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+} */
+
+
+
+footer {
+    background-color: #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%;
+    margin-top: auto;
+}
+
+.contact{
+    margin-right: 2em;
+    border-right: 2px solid white;
+    padding-right: 2em;
+}
+
+.social, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.social >:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+.social >:nth-child(2) > img, .contact > img {
+    max-width: 2em;
+}
+
+.responsiveNav{
+    z-index: 5;
+    position: sticky;
+    top:3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #24272b;
+}
+
+.responsiveNav > #searchArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 2.8em;
+    border-bottom: 1px solid #bbb;
+    margin-top: 1em;
+}
+
+.responsiveNav > #userArea{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3.5em;
+}
+
+.responsiveNav > ul {
+    text-align: center;
+}
+
+.responsiveNav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.responsiveNav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+.responsiveNav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* all devices */
+
+@media only screen and (max-width:1023px) and (min-width:0px){
+        
+            nav ul, nav #searchArea, nav #userArea {
+                display: none;
+                flex-direction: column;
+        
+            }
+        
+            #hamburgerMenu{
+                margin-left: 20px;
+                display: block;
+            }
+        
+            nav {
+                display: flex;
+                flex: row;
+                justify-content:space-between;
+                position: sticky;
+                top: 0;
+            }
+        
+            .responsiveNav{
+                overflow: hidden;
+            }
+        
+            .main{
+                max-width: 100%;
+            }
+}
+        
+/* Tablet */
+        
+@media only screen and (max-width:1023px) and (min-width:768px){
+    
+            .responsiveNav{
+                top: 4.65rem;
+            }
+
+            .productList {
+                padding: 2em 4em 2em ;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 2rem;
+                row-gap: 2rem;
+            }
+            
+
+            .productImage{
+                border-radius: 1.5rem;
+            }
+        
+            .title, .price {
+                font-size: 0.8rem;
+                max-width: fit-content;
+                max-height: 2rem ;
+                overflow: hidden;
+            }
+        
+            .productCard button{
+                font-size: 70%;
+            }
+        
+        }
+        
+/* mobile L */
+        
+@media only screen and (max-width:767px) and (min-width:425px){
+        
+            nav{
+                padding: 0%;
+                max-width: 100%;
+            }
+        
+            #hamburgerMenu img{
+                max-width: 1.8rem;
+            }
+        
+            [alt="Fixed Fitness logo"] {   
+                width: 2rem;
+                height: 2rem;
+            }
+        
+            .responsiveNav{
+                top: 2.5rem;
+            }
+        
+            #userArea{
+                max-width: 4rem;
+            }
+        
+            #searchArea{
+                max-width: 13rem;
+            }
+                   
+            #logoArea > a > h3 {
+                font-size: 90%;
+            }
+        
+            #logoArea > a {
+                font-size: 90%;
+                align-items: center;
+            }
+        
+            .responsiveNav ul li a{
+                font-size: 65%;
+            }
+        
+            .responsiveNav ul li{
+                margin-top: 15%;
+            } 
+        
+            .responsiveNav > #userArea{
+                margin-top: 0;
+            }
+        
+            [name="searchProductInput"] {
+                min-height: 1.1em;
+                font-size: 70%;
+            }
+        
+            #searchArea > button > img, #userArea > button > img{
+                max-width: 100%;
+            }
+
+            .productList {
+                padding: 1em 3em 2em ;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 2rem;
+                row-gap: 3rem;
+            }
+            
+
+            .productImage{
+                border-radius: 1.5rem;
+            }
+        
+            .title, .price {
+                font-size: 0.8rem;
+                max-width: fit-content;
+                max-height: 2rem ;
+                overflow: hidden;
+            }
+        
+            .productCard button{
+                font-size: 65%;
+            }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact, .social{
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact img{
+        max-width: 45%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 14%;
+    }
+        
+        }
+        
+/* mobile M */
+        
+@media only screen and (max-width:424px) and (min-width:375px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.5rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.4rem;
+    }
+
+    #searchArea{
+        max-width: 12.5rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 62%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 7%;
+    } 
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .productList {
+        padding: 1em 2em 2em ;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+    
+
+    .productImage{
+        border-radius: 1.5rem;
+    }
+
+    .title, .price {
+        font-size: 0.8rem;
+        max-width: fit-content;
+        max-height: 2rem ;
+        overflow: hidden;
+    }
+
+    .productCard button{
+        font-size: 65%;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .contact, .social{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact img{
+        max-width: 35%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 12%;
+    }
+        }
+        
+/* mobile S */
+        
+@media only screen and (max-width:374px) and (min-width:0px){
+            nav{
+                padding: 0%;
+            }
+        
+            #hamburgerMenu img{
+                max-width: 1.4rem;
+            }
+        
+            [alt="Fixed Fitness logo"] {   
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        
+            .responsiveNav{
+                top: 2.5rem;
+            }
+        
+            
+            #userArea{
+                max-width: 3.2rem;
+            }
+        
+            #searchArea{
+                max-width: 12rem;
+            }
+
+            #logoArea > a > h3 {
+                font-size: 90%;
+            }
+        
+            #logoArea > a {
+                font-size: 90%;
+                align-items: center;
+            }
+        
+            .responsiveNav ul li a{
+                font-size: 55%;
+            }
+        
+            .responsiveNav ul li{
+                margin-top: 4%;
+            } 
+            .responsiveNav > #userArea{
+                margin-top: 0;
+            }
+            [name="searchProductInput"] {
+                min-height: 1.1rem;
+                font-size: 65%;
+            }
+        
+        
+            #searchArea > button > img, #userArea > button > img{
+                max-width: 100%;
+            }
+        
+            .productList {
+                padding: 1em 2em 2em ;
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 2rem;
+                row-gap: 3rem;
+            }
+
+            .productCard {
+                margin: 0 auto;
+                max-width: 75%;
+            }
+            
+        
+            .productImage{
+                border-radius: 1.5rem;
+            }
+        
+            .title, .price {
+                font-size: 0.9rem;
+                max-width: fit-content;
+                max-height: 2rem ;
+                overflow: hidden;
+            }
+        
+            .productCard button{
+                font-size: 65%;
+            }
+        
+            footer{
+            max-height: 30%;
+            }
+        
+            .contact, .social{
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+        
+            .contact span, .social > span {
+                font-size: 65%;
+            }
+        
+            .contact img{
+                max-width: 27%;
+            }
+        
+            .social :nth-child(2) {
+                /* max-width: 15%; */
+                justify-content: space-evenly;
+            }
+        
+            .social :nth-child(2) img {
+                max-width: 10%;
+            }
+        }
+        

@@ -1,0 +1,903 @@
+html,body, .container{
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    max-width: 1200px;
+    min-height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    border: 1px solid red;
+    color: #ae0909;
+}
+
+.valid {
+    border: 1px solid black;
+    color: black;
+}
+
+nav {
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: #24272b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+#hamburgerMenu{
+    margin-right: 1em;
+    display: none;
+}
+
+#logoArea{
+    max-width: fit-content;
+}
+
+#logoArea > a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+[alt="Fixed Fitness logo"] {
+    width: 3em;
+    height: 3em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#logoArea > a >  h3 {
+    /* text-decoration: none; */
+    min-width: fit-content;
+
+}
+
+#logoArea:hover {
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+nav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+nav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+/* FORM CSS */
+
+#benefits, #category, #flavours, #images, #name, #prices, #productOverview, #stock, #suggestedUse, #unit {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0.8rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit],  input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  input[type=button] {
+    background-color: #303030;
+    color: white;
+  }
+
+  input[type=button]:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .editForm {
+    background-color: #f2f2f2;
+    padding: 1.2rem;
+  }
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+/* temporary */
+
+.productArea{
+    height: fit-content;
+}
+
+table{
+    width: 100%;
+    margin-top: 0;
+}
+
+.row{
+    border-bottom: 1px solid grey;
+}
+
+.header{
+    position: sticky;
+    top: 4.8rem;
+    color: white;
+    background-color: #24272b;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+.row > td {
+    font-size: 1.2rem;
+}
+
+tr > :nth-child(1), tr > :nth-child(4), tr > :nth-child(5){
+    max-width: 2rem;
+}
+
+tr > :nth-child(6){
+    max-width: 2.5rem;
+}
+
+tr > :nth-child(3){
+    max-width: 3rem;
+}
+
+tr > :nth-child(2) {
+    max-width: 3rem;
+}
+
+td{
+    text-align: center;
+}
+
+[name = "Product image"]{
+    max-width: 8rem;
+}
+
+.edit, .delete, .newProduct{
+    width: 5rem;
+    /* margin-left: 2em; */
+    font-size: 0.8rem;
+    /* font-weight: bold; */
+    background-color: #303030;
+    color: white;
+    padding: 2px 8px;
+    border: none;
+}
+
+.edit, .newProduct{
+    background-color:  white;
+    color: #24272b;
+    border: 1px solid #24272b;
+}
+
+.newProduct{
+    min-width: fit-content;
+}
+
+
+footer {
+    background-color: #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%;
+    margin-top: auto;
+}
+
+.contact{
+    margin-right: 2em;
+    border-right: 2px solid white;
+    padding-right: 2em;
+}
+
+.social, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.social >:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+.social >:nth-child(2) > img, .contact > img {
+    max-width: 2em;
+}
+
+.responsiveNav{
+    z-index: 5;
+    position: sticky;
+    top:3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #24272b;
+}
+
+.responsiveNav > #searchArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 2.8em;
+    border-bottom: 1px solid #bbb;
+    margin-top: 1em;
+}
+
+.responsiveNav > #userArea{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3.5em;
+}
+
+.responsiveNav > ul {
+    text-align: center;
+}
+
+.responsiveNav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.responsiveNav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+.responsiveNav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* all devices */
+
+@media only screen and (max-width:1023px) and (min-width:0px){
+
+    nav ul, nav #searchArea, nav #userArea {
+        display: none;
+        flex-direction: column;
+
+    }
+
+    #hamburgerMenu{
+        margin-left: 20px;
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex: row;
+        justify-content:space-between;
+        position: sticky;
+        top: 0;
+    }
+
+    .responsiveNav{
+        overflow: hidden;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .main{
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (max-width:1023px) and (min-width:768px){
+    tr > :nth-child(1), tr > :nth-child(4), tr > :nth-child(5) {
+        max-width: 2.2rem;
+    }
+    .header{
+        font-size: 1rem;
+    }
+
+    .responsiveNav{
+        top: 4.65rem;
+    }
+
+    .row > td {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+/* mobile L */
+
+@media only screen and (max-width:767px) and (min-width:425px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.8rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    #userArea{
+        max-width: 4rem;
+    }
+
+    #searchArea{
+        max-width: 13rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+    .responsiveNav ul li a{
+        font-size: 65%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 15%;
+    } 
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+
+    [name="searchProductInput"] {
+        min-height: 1.1em;
+        font-size: 0.8rem;
+    }
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .header{
+        top: 2.4rem;
+        height: 1rem;
+        font-size: 1rem;
+    }
+
+    tr > :nth-child(1), tr > :nth-child(4), tr > :nth-child(5){
+        max-width: 2rem;
+    }
+
+    tr > :nth-child(5){
+        display: none;
+    }
+    
+    tr > :nth-child(6){
+        max-width: 2.5rem;
+    }
+    
+    tr > :nth-child(3){
+        max-width: 3rem;
+    }
+    
+    tr > :nth-child(2) {
+        max-width: 3rem;
+    }
+
+    [name = "Product image"] {
+        max-width: 4.5rem;
+    }
+
+    .row > td{
+        font-size: 1rem;
+    }
+
+    .edit, .delete, .newProduct{
+        width: 4rem;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+    }
+    .editForm{
+        padding: 0.8rem;
+    }
+
+    .editForm > h1 {
+        font-size: 1.3rem;
+    }
+    label{
+        font-size: 0.9rem;
+    }
+
+    #benefits, #category, #flavours, #images, #name, #prices, #productOverview, #stock, #suggestedUse, #unit {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        max-height: fit-content;
+        font-size: 0.8rem;
+      }
+
+      input[type=submit], input[type=button] {
+        padding: 0.8rem 0.8rem;
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact, .social{
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact img{
+        max-width: 45%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 14%;
+    }
+}
+
+/* mobile M */
+
+@media only screen and (max-width:424px) and (min-width:375px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.5rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.4rem;
+    }
+
+    #searchArea{
+        max-width: 12.5rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 62%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 7%;
+    } 
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+
+    .header{
+        top: 2.4rem;
+        height: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    tr > :nth-child(1), tr > :nth-child(4){
+        max-width: 2rem;
+    }
+
+    tr > :nth-child(5){
+        display: none;
+    }
+    
+    tr > :nth-child(6){
+        max-width: 2.5rem;
+    }
+    
+    tr > :nth-child(3){
+        max-width: 3rem;
+    }
+    
+    tr > :nth-child(2) {
+        max-width: 3rem;
+    }
+
+    [name = "Product image"] {
+        max-width: 3.8rem;
+    }
+
+    .row > td{
+        font-size: 0.8rem;
+    }
+
+    .edit, .delete, .newProduct{
+        width: 3.5rem;
+        font-size: 0.6rem;
+        padding: 2px 8px;
+    }
+    .editForm{
+        padding: 0.5rem;
+    }
+
+    .editForm > h1 {
+        font-size: 1.2rem;
+    }
+    label{
+        font-size: 0.8rem;
+    }
+    #benefits, #category, #flavours, #images, #name, #prices, #productOverview, #stock, #suggestedUse, #unit {
+        padding: 0.35rem 0.5rem;
+        border-radius: 0.35rem;
+        font-size: 0.7rem;
+        min-height: fit-content;
+      }
+
+      input[type=submit], input[type=button] {
+        padding: 0.8rem 0.8rem;
+        margin: 0.5rem 0;
+        border-radius: 0.3rem;
+        font-size: 0.6rem;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .column h3 {
+        font-size: 70%;
+    }
+
+    .contact, .social{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact img{
+        max-width: 35%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 12%;
+    }
+}
+
+/* mobile S */
+
+@media only screen and (max-width:375px) and (min-width:320px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.4rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.2rem;
+    }
+
+    #searchArea{
+        max-width: 12rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+    .responsiveNav{
+        top: 7%;
+    }
+
+    .responsiveNav ul li a{
+        font-size: 55%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 4%;
+    } 
+
+    #userArea{
+        max-width: 15%;
+    }
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+    #searchArea{
+        max-width: 57%;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .header{
+        top: 2.4rem;
+        height: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    tr > :nth-child(1){
+        max-width: 2rem;
+    }
+
+    tr > :nth-child(4){
+        display: none;
+    }
+
+    tr > :nth-child(5){
+        display: none;
+    }
+    
+    tr > :nth-child(6){
+        max-width: 2.5rem;
+    }
+    
+    tr > :nth-child(3){
+        max-width: 3rem;
+    }
+    
+    tr > :nth-child(2) {
+        max-width: 3rem;
+    }
+
+    [name = "Product image"] {
+        max-width: 3.8rem;
+    }
+
+    .row > td{
+        font-size: 0.8rem;
+    }
+
+    .edit, .delete, .newProduct{
+        width: 3.3rem;
+        font-size: 0.6rem;
+        padding: 1px 7px;
+    }
+    .editForm{
+        padding: 0.3rem;
+    }
+
+    .editForm > h1 {
+        font-size: 1.1rem;
+    }
+    label{
+        font-size: 0.8rem;
+    }
+    #benefits, #category, #flavours, #images, #name, #prices, #productOverview, #stock, #suggestedUse, #unit {
+        padding: 0.35rem 0.5rem;
+        border-radius: 0.35rem;
+        font-size: 0.7rem;
+        min-height: fit-content;
+      }
+
+      input[type=submit], input[type=button] {
+        padding: 0.6rem 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 0.3rem;
+        font-size: 0.6rem;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .contact, .social{
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 65%;
+    }
+
+    .contact img{
+        max-width: 27%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 10%;
+    }
+}
+

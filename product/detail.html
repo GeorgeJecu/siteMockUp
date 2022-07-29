@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Fitness</title>
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Flogo.svg?alt=media&token=03ff221d-1249-4e1f-9666-bcf91bed20f8">
+    <link rel="stylesheet" href="detail.css">
+    <script src="detail.js"></script>
+</head>
+<body onload="getList()">
+    
+    <div class="container">
+        <div class="main">
+            <nav>
+                <div id="logoArea">
+                    <a href="../index.html">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Flogo.svg?alt=media&token=03ff221d-1249-4e1f-9666-bcf91bed20f8" alt="Fixed Fitness logo">
+                        <h3>Fixed Fitness</h3>
+                    </a>
+                </div>
+                <ul>
+                    <li> <a href="../index.html">HOME</a> </li>
+                    <li> <a href="product.html">PRODUCTS</a> </li>
+                    <li> <a href="">BLOG</a> </li>
+                    <li> <a href="">CONTACT</a> </li>
+                </ul>
+                <div id="searchArea">
+                    <input type="text" name="searchProductInput" placeholder="Search a product..." id="">
+                    <button onclick="cancel()" name="cancelProductButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FcancelIcon.png?alt=media&token=821ec514-49bb-4730-a17f-a71703e660bf" alt="cancel icon"></button>
+                    <button name="searchProductButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FsearchIcon.png?alt=media&token=1ec60977-9c37-49e2-b367-5f2996896235" alt="search icon"></button>
+                </div>
+
+                <div id="userArea">
+                    <button onclick="logIn()" name="loginButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fprofile.png?alt=media&token=c62f84f8-6827-41e0-a5f9-62ecdce70fdd" alt="login icon"></button>
+                    <button onclick="openCart()" name="basketButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbasket.png?alt=media&token=63901c10-e259-49df-a54f-c5f3ecea7e2c" alt="shopping basket icon"></button>
+
+                </div>
+                <div id="hamburgerMenu" onclick="toggleMenu()">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FhamburgerOpen.png?alt=media&token=d90ceed6-354a-4d79-ae27-28ee5fd8fbac" alt="hamburge menu icon">
+                </div>
+            </nav>
+
+            <div class="responsiveNav hidden">
+                <div id="searchArea">
+                    <input type="text" name="searchProductInput" placeholder="Search a product..." id="">
+                    <button onclick="cancel()" name="cancelProductButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FcancelIcon.png?alt=media&token=821ec514-49bb-4730-a17f-a71703e660bf" alt="cancel icon"></button>
+                    <button name="searchProductButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FsearchIcon.png?alt=media&token=1ec60977-9c37-49e2-b367-5f2996896235" alt="search icon"></button>
+                </div>
+
+                <ul>
+                    <li> <a href="../index.html">HOME</a> </li>
+                    <li> <a href="product.html">PRODUCTS</a> </li>
+                    <li> <a href="">BLOG</a> </li>
+                    <li> <a href="">CONTACT</a> </li>
+                </ul>
+
+                <div id="userArea">
+                    <button onclick="logIn()" name="loginButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fprofile.png?alt=media&token=c62f84f8-6827-41e0-a5f9-62ecdce70fdd" alt="login icon"></button>
+                    <button onclick="openCart()" name="basketButton"><img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbasket.png?alt=media&token=63901c10-e259-49df-a54f-c5f3ecea7e2c" alt="shopping basket icon"></button>
+                </div>
+
+            </div>
+            <div class="confirmation noOpacity">
+                <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Ftick.svg?alt=media&token=514b9f5b-b1c7-4703-a0a3-0124ced119fd" alt="">
+                <span>Product successfully added to your shopping cart</span>
+            </div>
+
+            <div class="productCard">
+
+                <div class="productDetail">
+                    <span id="responsiveProductTitle" class="title">Title of product</span>
+                    <div class="responsiveBenefits">
+                         
+                    </div>
+
+
+                    <div class="slideshow">
+
+                        <div class="slide fade">
+                            <button name="previous" onclick = "slideshowPrev()"> <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fprevious.svg?alt=media&token=ecbdf72a-a632-4161-8e59-4ddfe0a3c61c" alt=""> </button>
+                            <div class="imageSelect">
+                            </div>
+                                
+                            <button name="next" onclick = "slideshowNext()"> <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fnext.svg?alt=media&token=261b4215-f781-404c-9b7d-bb93e0e7999f" alt=""> </button>
+                        </div>
+                                
+                    </div>
+                    <div class="productInfo">
+
+                        <span class="title">PRODUCT OVERVIEW <button onclick="showDetail(productOverview)"><img name="productOverview" src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FexpandMore.svg?alt=media&token=bae3a9a6-e4c0-4163-b2f5-51c3de842602" alt="Expand button"></button></span>
+                        <span id="productOverview" class="content hidden"></span>
+                       
+                        <span class="title">BENEFITS <button onclick="showDetail(benefits)"><img name="benefits" src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FexpandMore.svg?alt=media&token=bae3a9a6-e4c0-4163-b2f5-51c3de842602" alt="Expand button"></button></span>
+                        <span id="benefits" class="content hidden"></span>
+                       
+                        <span class="title">SUGGESTED USE <button onclick="showDetail(suggestedUse)"><img name="suggestedUse" src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2FexpandMore.svg?alt=media&token=bae3a9a6-e4c0-4163-b2f5-51c3de842602" alt="Expand button"></button></span>
+                        <span id="suggestedUse" class="content hidden"></span>
+                        
+                    </div>
+
+                </div>
+
+                <div class="productSelect">
+                    <span id="productTitle" class="title">Title of product</span>
+
+                    <div class="benefits">
+                         
+                    </div>
+
+                    <span class="flavour">
+                        <span class="title">Flavour</span>
+                        <select onclick="validate()" name="flavour" id="">
+                        </select>
+                    </span>
+
+                    <span class="size">
+                        <span class="title">Size</span>
+                        <select onclick="calcPrice()" name="size" id="select">
+
+                        </select>
+                    </span>
+
+                    <span class="price hidden">
+                        <span></span>
+                    </span>
+                    <div class="quantity">
+                        <span class="stock"></span>
+                        <span class="title">Quantity</span>
+
+
+                        <button onclick="decrement()" class="decrement-quantity" aria-label="Subtract one" data-direction="-1" disabled>&#8722;</button>
+                        <input data-min="1" data-max="0" type="text" name="quantity" value="1" readonly="true">
+
+                        <button onclick="increment()" class="increment-quantity" aria-label="Add one" data-direction="1">&#43;</button>
+
+                        <button onclick="addToCart()" class="addToCart">ADD TO CART</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <footer>
+
+                <div class="contact">
+                    <span>Contact us:</span>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fmessage.png?alt=media&token=ba1031e2-148f-4914-b7e5-9f5c335d5bb4" alt="message logo">
+                    
+                </div>
+                <div class="social">
+                        <span>Let's get social:</span>
+                    <div>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Ffacebook.png?alt=media&token=14b718ef-a813-4910-8d9c-f32c179bc9a7" alt="Facebook logo">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Finstagram.png?alt=media&token=0d746f3b-1289-4b35-9e7d-af169cd2a1d1" alt="Instagram logo">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Flinkedin.png?alt=media&token=6d9aa710-bdcd-4588-b2d1-351167fc8513" alt="LinkedIn logo">
+                    </div>
+
+                    
+                </div>
+            </footer>
+        
+                          
+        </div>
+    </div>  
+
+</body>
+</html>

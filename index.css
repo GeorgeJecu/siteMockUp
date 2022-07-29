@@ -1,0 +1,1135 @@
+html,body, .container{
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    max-width: 1200px;
+    min-height: 100%;
+}
+
+
+nav {
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: #24272b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+#hamburgerMenu{
+    margin-right: 1em;
+    display: none;
+}
+
+#logoArea{
+    max-width: fit-content;
+}
+
+#logoArea > a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+[alt="Fixed Fitness logo"] {
+    width: 3em;
+    height: 3em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#logoArea > a >  h3 {
+    /* text-decoration: none; */
+    min-width: fit-content;
+
+}
+
+#logoArea:hover {
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+nav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+nav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row1{
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1 img {
+    width: 100%;
+}
+
+.row2{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 1rem;
+}
+
+.row2 a{
+    text-decoration: none;
+    /* margin-right: 2rem; */
+}
+
+.productCard {
+    transition: 1s;
+    transition-timing-function: ease;
+    background-color: white;
+    /* border: 1px solid  #24272b; */
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 0;
+    box-shadow: 10px 15px 20px 20px #3e3f41;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    max-width: 15rem;
+}
+
+.message{
+    background-color: green;
+    text-align: center;
+    color: white;
+    transform: rotate(-20deg);
+    position: relative;
+    top: 2em;
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+    
+
+@keyframes pulse {
+    0%   {transform: rotate(-20deg)}
+    25%  {transform: rotate(-30deg)}
+    50%  {transform: rotate(-15deg)}
+    100% {transform: rotate(-20deg)}
+  }
+    
+
+.productCard:hover{
+    max-width: 17rem;
+    transition: 1.5s;
+    transition-timing-function: ease;
+    box-shadow: 10px 15px 25px 25px #3e3f41;
+
+}
+.productImage {
+    border-radius: 10px;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+[alt="Product image"] {
+    max-width: 100%;
+}
+
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+}
+
+.title, .price {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #303030;
+    text-align: center;
+}
+.title{
+    font-weight: 600;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+    color:#a09c9c;
+}
+
+.productCard button {
+    padding: 1em;
+    margin: -1.2em;
+    margin-top: 5px;
+    border: none;
+    /* background-color: #303030; */
+    background-image: linear-gradient(to right, #1f1f1f, #414141);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: white;
+    /* font-size: 15px; */
+    font-weight: 600;
+
+}
+
+.commercial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 30rem;
+    /* position: relative;
+    left: -10em;
+    top: -20em; */
+}
+
+.commercial span {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+.row4{
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size:62%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    margin-left: 0;
+    width: 100%;
+}
+
+.backgroundStyle{
+    width: 30%;
+    margin-right: 2rem;
+}
+
+.backgroundStyle > img {
+    /* position: relative;
+    right: 0;
+    left: 800px; */
+    max-width: 100%;
+}
+
+
+/* Slideshow css */
+
+.slideContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: white;
+    width: 70%;
+
+}
+
+.slideshowArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slideArea{
+    /* max-height: 400px; */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slideshowImage {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+[name="previous"], [name = "next"] {
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+
+}
+
+.slideOut{
+    animation-duration: 3s;
+    animation-name: slideout;
+}
+
+.slideIn{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.row5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.row5 span{
+    font-size: 1.3rem;
+    max-width: 85%;
+}
+
+.values{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0;
+}
+
+.column > img {
+    width: 20%;
+}
+
+.fade {
+animation-name: fade;
+animation-duration: 2s;
+}
+
+
+@keyframes fade {
+from {opacity: .5}
+to {opacity: 1}
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+  @keyframes slideout {
+    from {
+      margin-left: -100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  #dots{
+    margin-bottom: 1rem;
+  }
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+}
+
+.active, button:hover {
+background-color: #484f53;
+transition: 1s ease;
+cursor: pointer;
+}
+
+footer {
+    background-color: #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%;
+    margin-top: auto;
+}
+
+.contact{
+    margin-right: 2em;
+    border-right: 2px solid white;
+    padding-right: 2em;
+}
+
+.social, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.social >:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+.social >:nth-child(2) > img, .contact > img {
+    max-width: 2em;
+}
+
+.responsiveNav{
+    z-index: 5;
+    position: sticky;
+    top:3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #24272b;
+}
+
+.responsiveNav > #searchArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 2.8em;
+    border-bottom: 1px solid #bbb;
+    margin-top: 1em;
+}
+
+.responsiveNav > #userArea{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3.5em;
+}
+
+.responsiveNav > ul {
+    text-align: center;
+}
+
+.responsiveNav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.responsiveNav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+.responsiveNav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* all devices */
+
+@media only screen and (max-width:1023px) and (min-width:0px){
+
+    #dots{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul, nav #searchArea, nav #userArea {
+        display: none;
+        flex-direction: column;
+
+    }
+
+    #hamburgerMenu{
+        margin-left: 20px;
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex: row;
+        justify-content:space-between;
+        position: sticky;
+        top: 0;
+    }
+
+    .responsiveNav{
+        overflow: hidden;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .main{
+        max-width: 100%;
+    }
+
+
+    .row2 a{
+        top: -15rem;
+        right: -26rem;
+
+    }
+
+    .productCard{
+        max-width: 14rem;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (max-width:1023px) and (min-width:768px){
+    .responsiveNav{
+        top: 4.65rem;
+    }
+
+    .row2 a{
+        max-width: 25%;
+    }
+
+    .commercial{
+        max-width: 40%;
+    }
+
+    .commercial span {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .title, .price {
+        font-size: 1.1rem;
+    }
+
+    .productCard button{
+        font-size: 90%;
+    }
+
+    .slideshowImage{
+        max-width: 85%;
+    }
+
+    .row5 span{
+        font-size: 1.2rem;
+    }
+
+}
+
+/* mobile L */
+
+@media only screen and (max-width:767px) and (min-width:425px){
+
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.8rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    #userArea{
+        max-width: 4rem;
+    }
+
+    #searchArea{
+        max-width: 13rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+
+    .responsiveNav ul li a{
+        font-size: 65%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 15%;
+    } 
+
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+
+    [name="searchProductInput"] {
+        min-height: 1.1em;
+        font-size: 70%;
+    }
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .row2 a{
+        max-width: 35%;
+    }
+
+    .commercial{
+        max-width: 40%;
+    }
+
+    .commercial span {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .title, .price {
+        font-size: 0.8rem;
+    }
+
+    .message{
+        font-size: 65%;
+
+    }
+    .productInfo{
+        height: 4rem;
+    }
+
+    .productCard{
+        padding: 0.6rem;
+    }
+
+    .productCard button{
+        font-size: 0.6rem;
+
+    }
+
+    .row4{
+        padding: 1rem 0;
+    }
+
+    .slideContent{
+        max-width: 60%;
+    }
+
+    .slideContent h2{
+        margin-bottom: 0px;
+        font-size: 90%;
+    }
+
+    .slide{
+        max-width: 100%;
+    }
+
+    .slideshowImage{
+        max-width: 80%;
+    }
+
+    .backgroundStyle{
+        width: 40%;
+    }
+
+    [name="previous"] img, [name = "next"] img {
+
+        max-width: 1.1rem;
+    
+    }
+
+    .row5 h2 {
+        font-size: 90%;
+    }
+
+    .row5 span{
+        font-size: 0.8rem;
+    }
+
+    .dot{
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    .column h3 {
+        font-size: 70%;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact, .social{
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact img{
+        max-width: 45%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 14%;
+    }
+}
+
+/* mobile M */
+
+@media only screen and (max-width:424px) and (min-width:375px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.5rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.4rem;
+    }
+
+    #searchArea{
+        max-width: 12.5rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+
+    .responsiveNav ul li a{
+        font-size: 62%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 7%;
+    } 
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .row2 a{
+        max-width: 33%;
+    }
+
+    .commercial{
+        max-width: 39%;
+    }
+
+    .commercial span {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    .title, .price {
+        font-size: 0.7rem;
+    }
+
+    .message{
+        font-size: 65%;
+
+    }
+    .productInfo{
+        height: 3rem;
+    }
+
+    .productCard{
+        padding: 0.5rem;
+    }
+
+    .productCard button{
+        font-size: 0.5rem;
+
+    }
+
+    .row4{
+        padding: 0.5rem 0;
+    }
+
+    .slideContent{
+        max-width: 60%;
+    }
+
+    .slideContent h2{
+        margin-bottom: 0px;
+        font-size: 75%;
+    }
+
+    .slide{
+        max-width: 100%;
+    }
+
+    .slideshowImage{
+        max-width: 100%;
+    }
+
+    .backgroundStyle{
+        width: 40%;
+    }
+
+    [name="previous"] img, [name = "next"] img {
+
+        max-width: 1rem;
+    
+    }
+
+    .row5 h2 {
+        font-size: 75%;
+    }
+
+    .row5 span{
+        font-size: 0.7rem;
+    }
+
+    .dot{
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .column h3 {
+        font-size: 70%;
+    }
+
+    .contact, .social{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact img{
+        max-width: 35%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 12%;
+    }
+}
+
+/* mobile S */
+
+@media only screen and (max-width:374px) and (min-width:320px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.4rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.2rem;
+    }
+
+    #searchArea{
+        max-width: 12rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 55%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 4%;
+    } 
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .row2 a{
+        max-width: 30%;
+    }
+
+    .commercial{
+        max-width: 35%;
+    }
+
+    .commercial span {
+        text-align: center;
+        font-size: 0.6rem;
+    }
+
+    .title, .price {
+        font-size: 0.6rem;
+    }
+
+    .message{
+        font-size: 65%;
+
+    }
+    .productInfo{
+        height: 2rem;
+    }
+
+    .productCard{
+        padding: 0.4rem;
+    }
+
+    .productCard button{
+        font-size: 0.38rem;
+
+    }
+
+    .row4{
+        padding: 0.5rem 0;
+    }
+
+    .slideContent{
+        max-width: 70%;
+    }
+
+    .slideContent h2{
+        margin-bottom: 0px;
+        font-size: 70%;
+    }
+
+    .slide{
+        padding-top: 10%;
+        max-width: 100%;
+    }
+
+    .slideshowImage{
+        max-width: 100%;
+    }
+
+    .backgroundStyle{
+        width: 45%;
+    }
+
+    [name="previous"] img, [name = "next"] img {
+
+        max-width: 0.7rem;
+    
+    }
+
+    .row5 h2 {
+        font-size: 70%;
+    }
+
+    .row5 span{
+        font-size: 0.6rem;
+    }
+
+    .dot{
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    .column h3 {
+        font-size: 55%;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .contact, .social{
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 65%;
+    }
+
+    .contact img{
+        max-width: 27%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 10%;
+    }
+}
+
+

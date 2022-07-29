@@ -1,0 +1,1143 @@
+html,body, .container{
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: cover;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    max-width: 1200px;
+    min-height: 100%;
+}
+
+.noOpacity{
+    opacity: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    border: 1px solid red;
+    color: #ae0909;
+}
+
+.valid {
+    border: 1px solid black;
+    color: black;
+}
+
+nav {
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: #24272b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+#hamburgerMenu{
+    margin-right: 1em;
+    display: none;
+}
+
+#logoArea{
+    max-width: fit-content;
+}
+
+#logoArea > a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+[alt="Fixed Fitness logo"] {
+    width: 3em;
+    height: 3em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#logoArea > a >  h3 {
+    /* text-decoration: none; */
+    min-width: fit-content;
+
+}
+
+#logoArea:hover {
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+nav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+nav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+.confirmation{
+    width: 100%;
+    color: white;
+    background-color: #24272b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 3.5rem;
+}
+
+.confirmation > img {
+    max-width: 2rem;
+}
+
+.slideshow {
+    margin-bottom: 2rem;
+}
+
+.productCard{
+    padding: 0 4em;;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+
+}
+
+.productDetail {
+    max-width: fit-content;
+    
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 25rem;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=ffad134b-e5d5-420c-907a-df0a750a73c5);
+    background-size: cover;
+    border-radius: 6%;
+    box-shadow: 10px 12px 20px;
+    /* margin-left: 6em; */
+}
+
+.slideshowImage {
+    max-width: 30rem;
+    border-radius: 6%;
+
+}
+
+[name="previous"], [name = "next"] {
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+[name="previous"] {
+    /* margin-left: -10em; */
+    left: 2rem;
+}
+
+[name = "next"] {
+    right: 2rem;
+}
+
+.fadeIn {
+animation-name: fadeIn;
+animation-duration: 2s;
+}
+.fadeOut {
+animation-name: fadeOut;
+animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+from {opacity: .5}
+to {opacity: 1}
+}
+@keyframes fadeOut {
+from {opacity: 1}
+to {opacity: 0}
+}
+
+#dots {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+}
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+}
+
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    /* margin-left: 2em; */
+}
+
+.title button {
+    background-color: transparent;
+    border: none;
+}
+
+.title{
+    max-width: 25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-top: 1px solid #24272b;
+    border-bottom: 1px solid #24272b;
+    margin-bottom: 1rem;
+
+}
+
+.title button>img {
+    max-width: 2rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;;
+}
+
+.content > span {
+    margin-top: 0.8rem;
+    max-width: 25rem;
+}
+
+.productSelect {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 1em;
+    margin-right: 2em; */
+
+}
+
+#productTitle, #responsiveProductTitle {
+    border: none;
+    font-size: 2rem;
+    max-width: fit-content;
+}
+
+#responsiveProductTitle{
+    display: none;
+}
+
+.benefits, .responsiveBenefits{
+    font-size: 1.3rem;
+    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #24272b;
+    color: #bbb;
+}
+
+.responsiveBenefits{
+    margin-bottom: 1rem;
+    border-bottom: none;
+    display: none;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    margin-bottom: 0.8rem;
+}
+
+.row > img{
+    max-width: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.flavour, .size {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8rem;
+
+}
+
+.flavour >.title, .size >.title, .quantity > .title, .stock{
+    border: none;
+    font-size: 1.3rem;
+}
+.stock{
+    /* margin-bottom: 30px; */
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.flavour > select, .size > select, select > option {
+    max-width: 20rem;
+    min-height: 4rem;
+    font-size: 1.3rem;
+}
+
+.price{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.quantity{
+    margin-top: 1.5rem;
+}
+
+.quantity > .title{
+    margin-top: 1.5rem;
+}
+
+.quantity > input, 
+.quantity > [aria-label="Subtract one"], 
+.quantity > [aria-label="Add one"]  {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.addToCart {
+    height: 3rem;
+    width: fit-content;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #303030;
+    color: white;
+    padding: 2px 8px;
+    border: none;
+}
+
+
+
+.active, button:hover {
+background-color: #484f53;
+transition: 1s ease;
+cursor: pointer;
+}
+
+footer {
+    background-color: #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%;
+    margin-top: auto;
+}
+
+.contact{
+    margin-right: 2em;
+    border-right: 2px solid white;
+    padding-right: 2em;
+}
+
+.social, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.social >:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+.social >:nth-child(2) > img, .contact > img {
+    max-width: 2em;
+}
+
+.responsiveNav{
+    z-index: 5;
+    position: sticky;
+    top:3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #24272b;
+}
+
+.responsiveNav > #searchArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 2.8em;
+    border-bottom: 1px solid #bbb;
+    margin-top: 1em;
+}
+
+.responsiveNav > #userArea{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3.5em;
+}
+
+.responsiveNav > ul {
+    text-align: center;
+}
+
+.responsiveNav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.responsiveNav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+.responsiveNav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* all devices */
+
+@media only screen and (max-width:1023px) and (min-width:0px){
+
+    nav ul, nav #searchArea, nav #userArea {
+        display: none;
+        flex-direction: column;
+
+    }
+
+    #hamburgerMenu{
+        margin-left: 20px;
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex: row;
+        justify-content:space-between;
+        position: sticky;
+        top: 0;
+    }
+
+    .responsiveNav{
+        overflow: hidden;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .main{
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+
+@media only screen and (max-width:1023px) and (min-width:768px){
+
+    .responsiveNav{
+        top: 4.65rem;
+    }
+
+
+    .productCard{
+        padding: 0 2em 0 3em; 
+        column-gap: 2rem;
+    }
+
+
+    .productDetail{
+        max-width: 90%;
+    }
+
+    .slideshowImage{
+        max-width: 26rem;
+    }
+    #productTitle, .price span{
+        max-width: fit-content;
+        font-size: 1.5rem;
+    }
+
+    .flavour > select, .size > select, select > option {
+        max-width: 20rem;
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+
+
+
+    .addToCart{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+}
+
+/* mobile L */
+
+@media only screen and (max-width:767px) and (min-width:425px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.8rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    #userArea{
+        max-width: 4rem;
+    }
+
+    #searchArea{
+        max-width: 13rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 65%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 15%;
+    } 
+
+
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+
+    [name="searchProductInput"] {
+        min-height: 1.1em;
+        font-size: 0.8rem;
+    }
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+
+    .productCard{
+        max-width: fit-content;
+        margin: 0 auto;
+        max-width: fit-content;
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-left: 1rem;
+        column-gap: 0;
+    }
+
+
+    #responsiveProductTitle, .responsiveBenefits{
+        display: block;
+    }
+
+    .responsiveBenefits{
+        font-size: 1rem;
+    }
+
+    
+    #productTitle, .benefits{
+        display: none;
+    }
+
+    .slideshow{
+        max-width: fit-content;
+        margin-left: 15%;
+    }
+
+    .slide{
+        max-width: 80%;
+    }
+
+    [name="previous"], [name = "next"] {
+        position: initial;
+    }
+    
+
+    .slideshowImage{
+        max-width: 18rem;
+    }
+
+
+    #responsiveProductTitle, .price{
+        max-width: fit-content;
+        font-size: 1.2rem;
+    }    
+    
+    .title{
+        font-size: 1.2rem;
+    }
+    
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .productSelect{
+        max-width: fit-content;
+    }
+
+    .flavour, .size, .price, .quantity{
+        max-width: fit-content;
+    }
+
+    .flavour .title, .size .title, .flavour .title, .quantity .title{
+        font-size: 1.2rem;
+    }
+
+    .flavour > select, .size > select, select > option {
+        min-width: 15rem;
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+
+    .stock{
+        font-size: 1.1rem;
+    }
+    .quantity > input, .quantity > [aria-label="Subtract one"], .quantity > [aria-label="Add one"] {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1rem;
+    }
+    
+
+
+    .addToCart{
+        margin: 10% 0;
+        font-size: 1rem;  
+    }
+
+    .confirmation{
+        font-size: 1rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact, .social{
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact img{
+        max-width: 45%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 14%;
+    }
+}
+
+/* mobile M */
+
+@media only screen and (max-width:424px) and (min-width:375px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.5rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.4rem;
+    }
+
+    #searchArea{
+        max-width: 12.5rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 62%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 7%;
+    } 
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+
+    .productCard{
+        max-width: fit-content;
+        margin: 0 auto;
+        max-width: fit-content;
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-left: 1rem;
+        column-gap: 0;
+    }
+
+    #responsiveProductTitle, .responsiveBenefits{
+        display: block;
+    }
+
+    .responsiveBenefits{
+        font-size: 1rem;
+    }
+
+    .responsiveBenefits .row img{
+        max-width: 1rem;
+
+    }
+
+    
+    #productTitle, .benefits{
+        display: none;
+    }
+
+    .slideshow{
+        max-width: fit-content;
+        margin-left: 10%;
+    }
+
+    .slide{
+        max-width: 80%;
+    }
+
+    [name="previous"], [name = "next"] {
+        position: initial;
+    }   
+    
+    [name="previous"] img, [name = "next"] img {
+        max-width: 1.8rem;
+    }
+    
+
+    .slideshowImage{
+        max-width: 14rem;
+    }
+
+
+    #responsiveProductTitle, .price{
+        max-width: fit-content;
+        font-size: 1.2rem;
+    }    
+    
+    .title{
+        font-size: 1.1rem;
+    }
+
+    .title button>img {
+        max-width: 1.3rem;
+    }
+    
+
+    .content {
+        font-size: 0.9rem;
+    }
+
+    .productSelect{
+        max-width: fit-content;
+    }
+
+    .flavour, .size, .price, .quantity{
+        max-width: fit-content;
+    }
+
+    .flavour .title, .size .title, .flavour .title, .quantity .title{
+        font-size: 1.1rem;
+    }
+
+    .flavour > select, .size > select, select > option {
+        min-width: 13rem;
+        min-height: 2rem;
+        font-size: 1rem;
+    }
+
+    .stock{
+        font-size: 1rem;
+    }
+    .quantity > input, .quantity > [aria-label="Subtract one"], .quantity > [aria-label="Add one"] {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+    }
+    
+    .addToCart{
+        margin: 10% 0;
+        font-size: 0.9rem;  
+    }
+
+    .confirmation{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .column h3 {
+        font-size: 70%;
+    }
+
+    .contact, .social{
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 75%;
+    }
+
+    .contact img{
+        max-width: 35%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 12%;
+    }
+}
+
+/* mobile S */
+
+@media only screen and (max-width:375px) and (min-width:320px){
+    nav{
+        padding: 0%;
+    }
+
+    #hamburgerMenu img{
+        max-width: 1.4rem;
+    }
+
+    [alt="Fixed Fitness logo"] {   
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .responsiveNav{
+        top: 2.5rem;
+    }
+
+    
+    #userArea{
+        max-width: 3.2rem;
+    }
+
+    #searchArea{
+        max-width: 12rem;
+    }
+
+    #logoArea > a > h3 {
+        font-size: 90%;
+    }
+
+    #logoArea > a {
+        font-size: 90%;
+        align-items: center;
+    }
+
+
+    .responsiveNav ul li a{
+        font-size: 55%;
+    }
+
+    .responsiveNav ul li{
+        margin-top: 4%;
+    } 
+
+    .responsiveNav > #userArea{
+        margin-top: 0;
+    }
+    [name="searchProductInput"] {
+        min-height: 1.1rem;
+        font-size: 65%;
+    }
+
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 100%;
+    }
+
+    .productCard{
+        max-width: fit-content;
+        margin: 0 auto;
+        max-width: fit-content;
+        grid-template-columns: 1fr;
+        padding: 0;
+        /* padding-left: 1rem; */
+        column-gap: 0;
+    }
+
+    #responsiveProductTitle, .responsiveBenefits{
+        display: block;
+    }
+
+    .responsiveBenefits{
+        font-size: 0.8rem;
+    }
+
+    .responsiveBenefits .row img{
+        max-width: 0.9rem;
+
+    }
+
+    
+    #productTitle, .benefits{
+        display: none;
+    }
+
+    .slideshow{
+        max-width: fit-content;
+        margin-left: 10%;
+    }
+
+    .slide{
+        max-width: 80%;
+    }
+
+    [name="previous"], [name = "next"] {
+        position: initial;
+    }   
+    
+    [name="previous"] img, [name = "next"] img {
+        max-width: 1.6rem;
+    }
+    
+
+    .slideshowImage{
+        max-width: 13rem;
+    }
+
+
+    #responsiveProductTitle, .price{
+        max-width: fit-content;
+        font-size: 1rem;
+    }    
+    
+    .title{
+        font-size: 0.8rem;
+    }
+
+    .title button>img {
+        max-width: 1.1rem;
+    }
+    
+
+    .content {
+        font-size: 0.8rem;
+    }
+
+    .productSelect{
+        max-width: fit-content;
+    }
+
+    .flavour, .size, .price, .quantity{
+        max-width: fit-content;
+    }
+
+    .flavour .title, .size .title, .flavour .title, .quantity .title{
+        font-size: 1rem;
+    }
+
+    .flavour > select, .size > select, select > option {
+        min-width: 12rem;
+        min-height: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .stock{
+        font-size: 1rem;
+    }
+    .quantity > input, .quantity > [aria-label="Subtract one"], .quantity > [aria-label="Add one"] {
+        height: 1.8rem;
+        width: 1.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .addToCart{
+        margin: 10% 0;
+        font-size: 0.8rem;
+        height: 2rem;
+    }
+
+    .confirmation{
+        font-size: 0.6rem;
+    }
+    .confirmation img{
+        max-width: 1rem;
+    }
+
+    footer{
+        max-height: 30%;
+    }
+
+    .contact, .social{
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .contact span, .social > span {
+        font-size: 65%;
+    }
+
+    .contact img{
+        max-width: 27%;
+    }
+
+    .social :nth-child(2) {
+        /* max-width: 15%; */
+        justify-content: space-evenly;
+    }
+
+    .social :nth-child(2) img {
+        max-width: 10%;
+    }
+}

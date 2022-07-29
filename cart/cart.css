@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=d30e2ae9-52af-461e-bcac-a2bce8572fa1);
+    background-size: contain;
+}
+
+
+
+.main{
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    width: 1200px;
+    min-height: 100%;
+}
+
+nav {
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    background-color: #24272b;
+    position: sticky;
+    top: 0;
+    width: 1200px;
+}
+
+#logoArea > a{
+    color: white;
+    text-decoration: none;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+[alt="Fixed Fitness logo"] {
+    width: 4em;
+    height: 4em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#logoArea > a >  h2 {
+    /* text-decoration: none; */
+    min-width: 6em;
+}
+
+#logoArea:hover {
+    cursor: pointer;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+nav > ul > li {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+nav > ul > li :hover{
+    color:#bbb;
+    transition: 1s;
+}
+
+
+nav > ul > li > a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#searchArea, #userArea {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    margin-right: 1em;
+}
+
+[name="searchProductButton"],
+[name="cancelProductButton"],
+[name="loginButton"],
+[name="basketButton"]  {
+    border: none;
+    background-color: transparent;
+}
+
+
+[name="searchProductInput"] {
+    min-height: 1.8em;
+    border: none;
+    background-color: transparent;
+    color: white;
+    /* outline: none; */
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+#searchArea > button > img,
+#userArea > button > img {
+    max-width: 1.8em;
+}
+
+.productArea{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/navImg%2Fbackground.jpg?alt=media&token=ffad134b-e5d5-420c-907a-df0a750a73c5);
+    background-size: cover;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+.productInfo{
+    margin: 1em;
+    border: 2px solid #24272b;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+.detailedInfo, .quantityInfo, .price{
+    font-size: 1.2em;
+    margin-top: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.price{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.productDetail, .productTotal{
+    max-width: fit-content;
+}
+.generalInfo{
+    margin-left: 1em;
+    margin-right: 1em;
+    min-width: 45em;
+    border-bottom: 2px solid #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generalInfo > img{
+    max-width: 130px;
+}
+.generalInfo > h2 > a{
+    margin-right: 3em;
+    text-decoration: none;
+    color: black;
+}
+
+.generalInfo > h2 > a:hover{
+    color: #bbb;
+    transition: 1s;
+}
+
+.detailedInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 20em
+}
+
+.quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid #24272b;
+    margin-top: -1em;
+
+}
+
+.quantityInfo{
+    display: flex;
+    flex-direction: column;    
+}
+
+.stock{
+    margin-right: 12em;
+}
+
+.quantity > input, 
+.quantity > [aria-label="Subtract one"], 
+.quantity > [aria-label="Add one"]  {
+    margin: 0px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.productTotal{
+    position: sticky;
+    top: 4.2em;
+    border-radius: 10px;
+    margin: 0.8em;
+    background-color: white;
+    min-width: 15em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: center; */
+}
+.productTotal h2 {
+    text-align: center;
+    border-bottom: 1px solid #24272b;
+    padding-bottom: 10px;
+}
+
+.productTotal [type="submit"]{
+    margin-bottom: 0;
+    /* width: 20em; */
+    height: 3em;
+    cursor: pointer;
+    background-color:  #24272b;
+    color: white;
+    border: 1px solid #24272b;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+}
+
+.productTotal [value="EMPTY CART"]{
+    background-color:  white;
+    color: #24272b;
+    border: 1px solid #24272b;
+    border-left: none;
+    border-right: none;
+    margin: 1em 0;
+}
+
+.orderCost, .shippingCost, .total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.total {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.shippingCost{
+    border-bottom: 1px solid #24272b;
+    padding-bottom: 10px;
+
+}
+
+
+
+footer {
+    background-color: #24272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 1200px;
+}
+
+.contact{
+    margin-right: 2em;
+    border-right: 2px solid white;
+    padding-right: 2em;
+}
+
+.social, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.social >:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+.social >:nth-child(2) > img, .contact > img {
+    max-width: 2em;
+}
