@@ -26,7 +26,7 @@ function getNewProduct(){
         // document.querySelector(".title").innerHTML=`${productName}`;
         // document.querySelector(".price").innerHTML=`$${productPrice}`;
 
-        str = `<a href=/finalProject/product/detail.html?id=${i}>
+        str = `<a href=product/detail.html?id=${i}>
         <div class="productCard">
         <div class="message">NEW ENTRY!</div>
             <div class="productImage">
