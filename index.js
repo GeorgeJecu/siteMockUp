@@ -4,7 +4,9 @@ let url = "https://fixedfitnesswebsite-default-rtdb.europe-west1.firebasedatabas
 let imgStr = ["https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/slideshow%2Fslide0.jpg?alt=media&token=3551e2a0-2549-40ca-af0d-c2622b1419d9",
             "https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/slideshow%2Fslide1.jpg?alt=media&token=627a8f0e-c039-483c-8419-917c07da409d",
             "https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/slideshow%2Fslide2.jpg?alt=media&token=6363d19f-f7cb-4b1d-9c09-f7df5bd3db26",
-            "https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/slideshow%2Fslide3.jpg?alt=media&token=0f6825c6-e635-43b0-b712-d01bf2b4dfc5"]
+            "https://firebasestorage.googleapis.com/v0/b/fixedfitnesswebsite.appspot.com/o/slideshow%2Fslide3.jpg?alt=media&token=0f6825c6-e635-43b0-b712-d01bf2b4dfc5"
+        ]
+let headers = ["Seasonal flavours.", "Plant based products.", "Every purpose has its own product.", "Delicious flavours."]        
 
 let idx = 1;
 
@@ -80,8 +82,10 @@ function slideshowNext() {
     <div class="slide slideIn">
         <img class="slideshowImage" src=${imgStr[idx]} alt="">`
     let slideshow = document.querySelector(".slideArea");
-    slideshow.innerHTML = str;
+    document.querySelector(".slideContent > h2").innerText = headers[idx] ;
+    console.log(headers[idx]);
 
+    slideshow.innerHTML = str;
     idx+=1;
 
 }

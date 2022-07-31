@@ -589,11 +589,15 @@ footer {
     }
 
     #userArea{
-        max-width: 4rem;
+        max-width: fit-content;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 1.2rem;
     }
 
     #searchArea{
-        max-width: 13rem;
+        max-width: fit-content;
     }
 
     #logoArea > a > h3 {
@@ -623,11 +627,6 @@ footer {
     [name="searchProductInput"] {
         min-height: 1.1em;
         font-size: 0.8rem;
-    }
-
-
-    #searchArea > button > img, #userArea > button > img{
-        max-width: 100%;
     }
 
 
@@ -736,7 +735,7 @@ footer {
     }
 
     .contact img{
-        max-width: 45%;
+        max-width: 1.6rem;
     }
 
     .social :nth-child(2) {
@@ -745,7 +744,7 @@ footer {
     }
 
     .social :nth-child(2) img {
-        max-width: 14%;
+        max-width: 1.6rem;
     }
 }
 
@@ -771,11 +770,15 @@ footer {
 
     
     #userArea{
-        max-width: 3.4rem;
+        max-width: fit-content;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 1rem;
     }
 
     #searchArea{
-        max-width: 12.5rem;
+        max-width: fit-content;
     }
 
     #logoArea > a > h3 {
@@ -803,10 +806,6 @@ footer {
     [name="searchProductInput"] {
         min-height: 1.1rem;
         font-size: 65%;
-    }
-
-    #searchArea > button > img, #userArea > button > img{
-        max-width: 100%;
     }
 
 
@@ -933,7 +932,7 @@ footer {
     }
 
     .contact img{
-        max-width: 35%;
+        max-width: 1.4rem;
     }
 
     .social :nth-child(2) {
@@ -942,7 +941,7 @@ footer {
     }
 
     .social :nth-child(2) img {
-        max-width: 12%;
+        max-width: 1.3rem;
     }
 }
 
@@ -968,11 +967,15 @@ footer {
 
     
     #userArea{
-        max-width: 3.2rem;
+        max-width: fit-content;
+    }
+
+    #searchArea > button > img, #userArea > button > img{
+        max-width: 1rem;
     }
 
     #searchArea{
-        max-width: 12rem;
+        max-width: fit-content;
     }
 
     #logoArea > a > h3 {
@@ -999,11 +1002,6 @@ footer {
     [name="searchProductInput"] {
         min-height: 1.1rem;
         font-size: 65%;
-    }
-
-
-    #searchArea > button > img, #userArea > button > img{
-        max-width: 100%;
     }
 
     .productCard{
@@ -1129,7 +1127,7 @@ footer {
     }
 
     .contact img{
-        max-width: 27%;
+        max-width: 1.2rem;
     }
 
     .social :nth-child(2) {
@@ -1138,6 +1136,6 @@ footer {
     }
 
     .social :nth-child(2) img {
-        max-width: 10%;
+        max-width: 1.1rem;
     }
 }
